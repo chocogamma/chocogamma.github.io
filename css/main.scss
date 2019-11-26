@@ -1,0 +1,160 @@
+@import url("/css/font.min.css");
+
+@import url("/css/scrollbar.min.css");
+
+@import url("/css/toggle.min.css");
+
+@import url("/css/header.min.css");
+
+@import url("/css/prism.min.css");
+
+body {
+  background-color: #757575;
+}
+
+main {
+  ::selection {
+    background-color: #f8a945;
+  }
+
+  section.indexlist, section.tagslist {
+    position: relative;
+    background-color: #f8f9fa;
+
+    &:hover, &:focus {
+      background-color: #ffffcc;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .inner {
+      position: relative;
+      z-index: 1;
+      height: 100px;
+      pointer-events: none;
+
+      a {
+        pointer-events: all;
+
+        &:hover {
+          background-color: #ffffcc !important;
+        }
+      }
+    }
+
+    header {
+      font-size: 2em;
+    }
+  }
+
+  section.tagscloud {
+    padding-bottom: 1.3em;
+    cursor: pointer;
+    background-color: #f8f9fa;
+
+    &:hover, &:focus, span:hover {
+      background-color: #ffffcc !important;
+    }
+
+    header {
+      font-size: 2em;
+    }
+  }
+
+  article {
+    padding: 1em !important;
+    background-color: #ffffff;
+
+    blockquote {
+      margin: 1em 0;
+      padding: 1em;
+      border-left: 6px solid #f8a945;
+      background-color: #eeece8;
+    }
+
+    @media (min-width: 768px) {
+      blockquote {
+        margin: 1em 1em;
+      }
+    }
+
+    @media (min-width: 992px) {
+      blockquote {
+        margin: 1em 2em;
+      }
+    }
+
+    @media (min-width: 992px) {
+      h1 {
+        margin-left: 0.2em;
+      }
+
+      h2, h3, h4, h5, h6 {
+        margin-top: 1em;
+        margin-left: 0.7em;
+      }
+    }
+
+    > p {
+      margin: 1em 0;
+      padding: 0 1em;
+    }
+
+    @media (min-width: 768px) {
+      > p {
+        margin: 1em 1em;
+      }
+    }
+
+    @media (min-width: 992px) {
+      > p {
+        margin: 1em 2em;
+      }
+    }
+
+    a {
+      text-decoration: none !important;
+      color: #f18f12;
+
+      &:hover {
+        color: #db7b00;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    figure, figcaption {
+      text-align: center;
+    }
+
+    pre {
+      margin: 1em 0 !important;
+    }
+
+    @media (min-width: 768px) {
+      pre {
+        margin: 1em 1em !important;
+      }
+    }
+
+    @media (min-width: 992px) {
+      pre {
+        margin: 1em 2em !important;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    article {
+      padding: 3em !important;
+    }
+  }
+}

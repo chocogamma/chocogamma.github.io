@@ -1,0 +1,21 @@
+header {
+  nav {
+    button.navbar-toggler:focus {
+      outline: 0;
+    }
+
+    a.navbar-brand {
+      img {
+        transition: transform 1s ease-in-out;
+      }
+
+      img:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  section.percentage-bar {
+    height: 3px;
+  }
+}

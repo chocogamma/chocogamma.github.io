@@ -1,0 +1,25 @@
+.toggle-top {
+  position: fixed;
+  z-index: 1000;
+  right: 1em;
+  bottom: 2.5em;
+  display: none;
+  width: 45px;
+  height: 45px;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle-top {
+    right: 1.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .toggle-top {
+    right: 2em;
+  }
+}

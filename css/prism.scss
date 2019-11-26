@@ -1,0 +1,185 @@
+/* PrismJS 1.17.1
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+applescript+csharp+aspnet+markup-templating+jq+json+django+sql+scss+python+plsql+swift&plugins=line-highlight+line-numbers */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"], pre[class*="language-"] {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+
+      -ms-hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  overflow: auto;
+  margin: 0.5em 0;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  white-space: normal;
+  border-radius: 0.3em;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+  color: #f92672;
+}
+
+.token.boolean, .token.number {
+  color: #ae81ff;
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #a6e22e;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule, .token.attr-value, .token.function, .token.class-name {
+  color: #e6db74;
+}
+
+.token.keyword {
+  color: #66d9ef;
+}
+
+.token.regex, .token.important {
+  color: #fd971f;
+}
+
+.token.important, .token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  line-height: inherit;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: 1em; /* Same as .prism’s padding-top */
+  padding: inherit 0;
+  white-space: pre;
+  pointer-events: none;
+  background: hsla(24, 20%, 50%,0.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,0.1) 70%, hsla(24, 20%, 50%,0));
+}
+
+.line-highlight:before, .line-highlight[data-end]:after {
+  font: bold 65%/1.5 sans-serif;
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  content: attr(data-start);
+  text-align: center;
+  vertical-align: 0.3em;
+  color: hsl(24, 20%, 95%);
+  border-radius: 999px;
+  background-color: hsla(24, 20%, 50%,0.4);
+  box-shadow: 0 1px white;
+  text-shadow: none;
+}
+
+.line-highlight[data-end]:after {
+  top: auto;
+  bottom: 0.4em;
+  content: attr(data-end);
+}
+
+.line-numbers .line-highlight:before, .line-numbers .line-highlight:after {
+  content: none;
+}
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  font-size: 100%;
+  position: absolute;
+  top: 0;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  letter-spacing: -1px;
+  pointer-events: none;
+  border-right: 1px solid #999999;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+  pointer-events: none;
+}
+
+.line-numbers-rows > span:before {
+  display: block;
+  padding-right: 0.8em;
+  content: counter(linenumber);
+  text-align: right;
+  color: #999999;
+}
